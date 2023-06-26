@@ -1,273 +1,73 @@
-body::-webkit-scrollbar {
-  display: none;
+body{
+    font-family: Verdana;
+    font-size: 16px;
 }
 
-div::-webkit-scrollbar {
-  width: 0 !important;
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
-:root {
-  --theme-color: black;
+a{
+    color: white;
+    text-decoration: none;
 }
 
-.bg-color {
-  background-color: #0c1027 !important;
+/*colors*/
+.bgcolor-blue{
+    background-color: #218380;
 }
 
-.bg-color-light {
-  background-color: #12193c !important;
+.text-col-white{
+    color: white;
 }
 
-.textcolor {
-  color: white !important;
+/*nav bar*/
+.navbar{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    height: auto;
 }
 
-.text-light-color {
-  color: lightgrey !important;
+/*card*/
+.card{
+    border: 2px solid lightgray;
+    border-radius: 1rem;
+    padding: 2%;
+    box-shadow: 3px 4px 4px lightgrey;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute; */
 }
 
-i {
-  color: lightgrey !important;
+.btn-fonts{
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
 }
 
-.radius-right-0 {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.option-container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.radius-left-0 {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.border-radius-0 {
-  border-radius: 0;
-}
-
-.border-none {
-  border: none;
-}
-
-.border-50 {
-  border-radius: 50%;
-}
-
-/*main*/
-.main-content {
-  display: inline-block;
-  position: relative;
-  width: 75%;
-  top: 5rem;
-}
-
-.right-content {
-  display: inline-block;
-  width: 24%;
-  position: fixed;
-  top: 5rem;
-}
-
-.right-content-scroll {
-  overflow: auto;
-  height: 90vh;
-}
-
-.carousel-image {
-  width: 14rem;
-  height: 14rem;
-  object-fit: contain;
-}
-
-.right-indent {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.text-width {
-  max-width: 150px;
-}
-
-.recent-rel-card {
-  height: 100%;
-  width: 95%;
-}
-
-.genre-size {
-  height: 100px;
-  width: 100px;
-}
-
-.card-img {
-  object-fit: contain;
-}
-
-.playlist-size {
-  object-fit: contain;
-  overflow: hidden;
-  margin: 1rem;
-  position: relative;
-  text-align: center;
-}
-
-.playlist-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-}
-
-.artist-size {
-  margin: 1rem;
-  text-align: center;
-  min-width: 5rem;
-}
-
-.right-scroll {
-  overflow-x: scroll;
-}
-
-.parent-container {
-  position: relative;
-  overflow: hidden;
-  object-fit: contain;
-}
-
-.latest-rel {
-  height: 30%;
-  width: 30%;
-}
-
-.latest-rel-img-size {
-  width: 12rem;
-  object-fit: contain;
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: grey;
-  opacity: 0;
-}
-
-.center-pos {
-  top: 50%;
-  left: 50%;
-}
-
-.scroll-indicator {
-  background-color: transparent;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  transform: translate(-50%, 175%);
-}
-
-/*animations*/
-.overlay:hover {
-  opacity: 0.6;
-}
-
-.carousel-image:hover {
-  /*#carouselPlaylists img:hover{*/
-  transition: all 0.5s ease-in-out;
-  transform: scale(1.1);
-}
-
-#playlist-section .playlist-size:hover .playlist-img {
-  animation: zoomin 0.5s ease-in-out;
-  animation-fill-mode: both;
-}
-
-@keyframes zoomin {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
-}
-
-#music-player:target {
-  height: 10%;
-}
-
-.change-color:hover {
-  color: white !important;
-}
-
-/*music player*/
-.music-player-pos {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  transition: all 2s ease-in-out;
-}
-
-.player-bg {
-  background-color: black;
-}
-
-.card-width {
-  max-width: 30%;
-}
-
-.slider {
-  width: 75%;
-}
-
-.vol-slider {
-  width: 25%;
-}
-
-/*dimensions change*/
-
-@media screen and (max-width: 992px) {
-  .carousel-image {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .main-content {
-    display: block;
-    position: relative;
+.btn-option{
     width: 100%;
-    top: 5rem;
-  }
-
-  .right-content {
-    display: block;
-    width: 100%;
-    position: relative;
-    top: 5rem;
-  }
+    margin: 2px;
 }
 
-@media screen and (max-width: 762px) {
-  .scroll-indicator {
-    opacity: 1;
-  }
-
-  .hide-min {
+.hidesection{
+    height: 0;
     width: 0;
+    padding: 0;
     overflow: hidden;
-  }
 }
 
-@media screen and (max-width: 576px) {
-  .carousel-image {
-    width: 4rem;
-    height: 4rem;
-  }
+.padding-1{
+    padding: 1rem;
 }

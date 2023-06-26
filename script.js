@@ -114,7 +114,7 @@ function changeQuestion(){
 function endquiz(){
     scoresheet.classList.remove('hidesection');
     qsection.classList.add('hidesection');
-    finalScore.innerText=finalScore.innerText+ " " + time +"."
+    finalScore.innerText="Your final score is: " + time +"."
 }
 
 function startTimer(){

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ninja Studio</title>
+    <link rel="icon" type="image/x-icon" href="music/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/87f063257c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body class="bg-color textcolor">
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- navigation bar-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="music/logo.png" alt="logo" width="95" height="40"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light-color change-color" aria-current="page" href="#">Favourites</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <button class="btn btn-dark border-none bg-color-light radius-right-0" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass change-color"></i></button>
+              <input class="form-control bg-color-light border-none border-radius-0 textcolor" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-dark border-none bg-color-light radius-left-0" type="button"><i class="fa-solid fa-microphone change-color"></i></button>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-bell notification-icon fa-lg change-color"></i>
+                  <span class="position-absolute top-0.7 translate-middle p-1 bg-danger rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end p-2">
+                  <li>Get premium now at only Rs 99 per month. <i class="fa-solid fa-crown"></i></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>Check out our new playlists made only for you.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="music/profile-pic.jpg" alt="profile"  alt="logo" width="40" height="40" class="border-50">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Johnny Depp (Profile)</a></li>
+                  <li><a class="dropdown-item" href="#">Get Premium <i class="fa-solid fa-crown"></i></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--main-->
+        <!--main center content-->
+        <main class="main-content col-md-8">
+          <!--playlist carousels-->
+          <div class="d-flex flex-row justify-content-center">
+            <a href="singlePlaylist.html"><img src="music/playlist1.jpeg" class="carousel-image m-2" alt="Latin Party Hits"></a>
+            <a href="singlePlaylist.html"><img src="music/playlist2.jpeg" class="carousel-image m-2" alt="Dance Party"></a>
+            <a href="singlePlaylist.html"><img src="music/playlist3.jpeg" class="carousel-image m-2" alt="Indie Party"></a>
+          </div>
+
+          <!--latest relaese-->
+          <h4 class=" mt-4">Latest Release</h4>
+          <div class="d-flex flex-row flex-wrap">
+            <!--song1-->
+              <div class="me-auto p-2">
+                <div class="card mb-3 bg-color textcolor" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-4 latest-rel parent-container">
+                      <img src="music/latest-rel1.jpeg" class="img-fluid latest-rel-img-size" alt="Peaches">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                      </div>
+                      <!-- <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#"><i class="fa-solid fa-pause fa-2xl textcolor center-pos"></i></a> 
+                      </div> -->
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <div class="card-text dropdown text-end right-indent">
+                          <button class="btn border-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis change-color"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#music-player"><i class="fa-solid fa-play"></i> Play Now</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i> Add To Queue</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-heart"></i> Add To Favourites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info"></i> Get Info</a></li>
+                          </ul>
+                          <br/>
+                          <small class="p-2 text-light-color">4:44</small>
+                        </div>
+                        <h5 class="card-title text-width text-truncate">Peaches</h5>
+                        <p class="card-text"><small class="text-light-color">Jul 11, 2023</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--song2-->
+              <div class="me-auto p-2">
+                <div class="card mb-3 bg-color textcolor" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-4 latest-rel parent-container">
+                      <img src="music/latest-rel2.jpeg" class="img-fluid latest-rel-img-size" alt="Anti-Hero">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                      </div>
+                      <!-- <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#"><i class="fa-solid fa-pause fa-2xl textcolor center-pos"></i></a> 
+                      </div> -->
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <div class="card-text dropdown text-end right-indent">
+                          <button class="btn border-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis change-color"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#music-player"><i class="fa-solid fa-play"></i> Play Now</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i> Add To Queue</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-heart"></i> Add To Favourites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info"></i> Get Info</a></li>
+                          </ul>
+                          <br/>
+                          <small class="p-2 text-light-color">4:44</small>
+                        </div>
+                        <h5 class="card-title text-width text-truncate">Anti-Hero</h5>
+                        <p class="card-text"><small class="text-light-color">Jul 11, 2023</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--song3-->
+              <div class="me-auto p-2">
+                <div class="card mb-3 bg-color textcolor" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-4 latest-rel parent-container">
+                      <img src="music/latest-rel3.jpeg" class="img-fluid latest-rel-img-size" alt="As It Was">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                      </div>
+                      <!-- <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#"><i class="fa-solid fa-pause fa-2xl textcolor center-pos"></i></a> 
+                      </div> -->
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <div class="card-text dropdown text-end right-indent">
+                          <button class="btn border-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis change-color"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#music-player"><i class="fa-solid fa-play"></i> Play Now</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i> Add To Queue</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-heart"></i> Add To Favourites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info"></i> Get Info</a></li>
+                          </ul>
+                          <br/>
+                          <small class="p-2 text-light-color">4:44</small>
+                        </div>
+                        <h5 class="card-title text-width text-truncate">As It Was</h5>
+                        <p class="card-text"><small class="text-light-color">Aug 11, 2017</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--song4 -->
+              <div class="me-auto p-2">
+                <div class="card mb-3 bg-color textcolor" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-4 latest-rel parent-container">
+                      <img src="music/latest-rel4.jpeg" class="img-fluid latest-rel-img-size" alt="Sidewalks">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                      </div>
+                      <!-- <div class="overlay d-flex justify-content-center align-items-center">
+                        <a href="#"><i class="fa-solid fa-pause fa-2xl textcolor center-pos"></i></a> 
+                      </div> -->
+                    </div>
+                    <div class="col-8">
+                      <div class="card-body">
+                        <div class="card-text dropdown text-end right-indent">
+                          <button class="btn border-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis change-color"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#music-player"><i class="fa-solid fa-play"></i> Play Now</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus"></i> Add To Queue</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-heart"></i> Add To Favourites</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info"></i> Get Info</a></li>
+                          </ul>
+                          <br/>
+                          <small class="p-2 text-light-color">4:44</small>
+                        </div>
+                        <h5 class="card-title text-width text-truncate">Side Walks</h5>
+                        <p class="card-text"><small class="text-light-color">Aug 11, 2017</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!--popular artists-->
+          <h4 class=" mt-4">Popular Artists</h4>
+          <div class="d-flex flex-row right-scroll">
+            <div>
+              <div id="pop1" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist1.jpeg" class="img-fluid" alt="popular-artist1">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop1" class="d-flex justify-content-center">Adele</label>
+            </div>
+            <div>
+              <div  id="pop2" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist2.jpeg" class="img-fluid" alt="popular-artist2">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop2" class="d-flex justify-content-center">Rihanna</label>
+            </div>
+            <div>
+              <div id="pop3" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist3.jpeg" class="img-fluid" alt="popular-artist3">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop3" class="d-flex justify-content-center">Beyonce</label>
+            </div>
+            <div>
+              <div id="pop4" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist4.jpeg" class="img-fluid" alt="popular-artist4">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop4" class="d-flex justify-content-center">Harry Styles</label>
+            </div>
+            <div>
+              <div id="pop5" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist5.jpeg" class="img-fluid" alt="popular-artist5">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop5" class="d-flex justify-content-center">Imagine Dragons</label>
+            </div>
+            <div>
+              <div id="pop6" class="artist-size rounded-circle parent-container">
+                <img src="music/pop-artist6.jpeg" class="img-fluid" alt="popular-artist6">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                  <a href="singlePlaylist.html"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                </div>
+              </div>
+              <label for="pop6" class="d-flex justify-content-center">Taylor Swift</label>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+          </div>
+
+          <!--genres section-->
+          <div class="d-flex flex-row my-4 bg-color-light right-scroll">
+              <div class="artist-size genre-size">
+                <img src="music/music-genre.jpg" class="img-fluid" alt="music genres">
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/love.jpeg" class="img-fluid" alt="romantic songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-danger text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Love</div>
+                </a>
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/retro.jpeg" class="img-fluid" alt="retro songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-warning text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Retro</div>
+                </a>
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/chill.jpeg" class="img-fluid" alt="chill songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-info text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Chill</div>
+                </a>
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/workout.jpeg" class="img-fluid" alt="workout songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-success text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Workout</div>
+                </a>
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/rock.jpeg" class="img-fluid" alt="rock songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-danger text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Rock</div>
+                </a>
+              </div>
+              <div class="artist-size rounded-circle parent-container">
+                <img src="music/pop.jpeg" class="img-fluid" alt="pop songs">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-primary text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fw-bold fs-4 overlay-text">Pop</div>
+                </a>
+              </div>
+              <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+          </div>
+
+          <!--playlist section-->
+          <div id="playlist-section" class="d-flex flex-row">
+              <div class="playlist-size">
+                <img src="music/party.jpeg" class="img-fluid playlist-img" alt="party music">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-primary text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fs-2 overlay-text">Party</div>
+                </a>
+              </div>
+              <div class="playlist-size">
+                <img src="music/electronic.jpeg" class="img-fluid playlist-img" alt="electronic music">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-danger text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fs-2 overlay-text">Electronic</div>
+                </a>
+              </div>
+              <div class="playlist-size">
+                <img src="music/roadtrip.jpeg" class="img-fluid playlist-img" alt="Roadtrip music">
+                <a href="singlePlaylist.html" class="textcolor playlist-overlay bg-warning text-decoration-none d-flex justify-content-center align-items-center">
+                  <div class="artist-size fs-2 overlay-text">Roadtrip</div>
+                </a>
+              </div>
+          </div>
+
+          <!--latest english-->
+          <h4 class=" mt-4">Latest English</h4>
+          <div class="d-flex flex-row right-scroll">
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist1.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist2.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist3.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist4.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist5.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist6.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+              <!--enable scroll for small screen-->
+              <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+          </div>
+          
+
+
+          <!--latest hindi-->
+          <h4 class=" mt-4">Latest Hindi</h4>
+          <div class="d-flex flex-row right-scroll">
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist1.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist2.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist3.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist4.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist5.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+
+              <div class="artist-size">
+                <div class="card latest-card-size bg-color textcolor">
+                  <img src="music/pop-artist6.jpeg" class="card-img-top img-fluid card-img border-radius-0">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <h6 class="card-title m-0">Let her go</h6>
+                  <p class="card-text"><small class="text-light-color">Aug 11, 2017</small><br/></p>
+                </div>
+              </div>
+              <!--enable scroll for small screen-->
+              <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+          </div>
+
+
+        </main>
+      
+        <!--right content-->
+        <aside id="queue" class="right-content col-md-3">
+          
+          <h4>Queue</h4>
+          <div class="dropdown right-indent">
+            <button class="btn dropdown-toggle text-success" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Queue
+            </button>
+            <ul class="dropdown-menu">
+              <!-- <li><a class="dropdown-item active" href="#">Queue</a></li> -->
+              <li><a class="dropdown-item" href="#">Playlists</a></li>
+              <li><a class="dropdown-item" href="#">Favourite Songs</a></li>
+            </ul>
+          </div>
+          <div class="right-content-scroll">
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  01
+                </div>
+
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  02
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  03
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  04
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  05
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  06
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  07
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  08
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  09
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3 bg-color textcolor">
+              <div class="row g-0">
+                <div class="col">
+                  10
+                </div>
+                <div class="col-4 parent-container">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid rounded-start" alt="album">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <a href="#music-player"><i class="fa-solid fa-play fa-2xl textcolor center-pos"></i></a> 
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart"></i>
+                      </a>
+                    </div>
+                    <h5 class="card-title">Mirage</h5>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+      </aside>
+      <!--music player-->
+      <footer>
+      <div id="music-player" class="music-player-pos player-bg">
+        <div class="d-flex flex-row">
+          <div class="col-md-3 card m-2 player-bg textcolor card-width">
+            <div class="row g-0">
+              <div class="col-2">
+                  <img src="music/latest-rel1.jpeg" class="img-fluid" alt="song">
+              </div>
+              <div class="col">
+                <div class="card-body py-1 px-2">
+                    <div class="card-text text-end right-indent">
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-regular fa-heart hide-min"></i>
+                      </a>
+                      <a href="#" class="btn border-none" role="button" data-bs-toggle="button">
+                        <i class="fa-solid fa-ban hide-min"></i>
+                      </a>
+                    </div>
+                    <h6 class="card-title text-width text-truncate">Mirage</h6>
+                    <p class="card-text"><small class="text-light-color">Else</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <audio> <!--autoplay not given-->
+              <source src="music/song.mp3" type="audio/mp3">
+            </audio>
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row justify-content-center align-items-center my-1">
+                <div><a href="#"><i class="fas fa-random mx-3"></i></a></div>
+                <div><a href="#"><i class="fas fa-step-backward mx-3"></i></a></div>
+                <div><a href="#"><i class="fas fa-pause-circle mx-3"></i></a></div>
+                <div><a href="#"><i class="fas fa-step-forward mx-3"></i></a></div>
+                <div><a href="#"><i class="fa-solid fa-repeat mx-3"></i></a></div>
+              </div>
+              <div class="d-flex flex-row justify-content-center align-items-center my-1">
+                <div>1:39</div>
+                <input type="range" min="0" max="100" value="25" class="mx-2 slider" id="audio">
+                <div>4:44</div>  
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center align-items-center">
+            <a href="#"><i class="fa-solid fa-list mx- hide-min"></i></a>
+            <a href="#"><i class="fa-solid fa-computer mx-3 hide-min"></i></a>
+            <i class="fa-solid fa-volume-low mx-1 hide-min"></i>
+            <input type="range" min="0" max="100" value="25" class="mx-2 vol-slider hide-min" id="volume">
+            <a href="#"><i class="fa-solid fa-up-right-and-down-left-from-center mx-3"></i></a>
+          </div>
+        </div>
+      </div>
+      </footer>
+
+    </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  </body>
+
+  <script src="script.js"></script>
+</html>
